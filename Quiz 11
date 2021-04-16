@@ -1,0 +1,36 @@
+# Quiz 11
+
+# Tony Maldonado-Perez
+# amaldo36@uic.edu
+
+# I hereby attest that I have adhered to the rules for quizzes and projects as well as UIC's
+# Academic Integrity standards: Anthony Maldonado-Perez
+
+# Question 1
+import string as str
+
+# a)
+
+L1 = ['hello','this is a string']
+N = list(map(lambda x: "{:-}".format(x),L1))
+print(list(N))
+# I tried to import the string module to be able to convert L1 as '-'
+
+# b)
+from numbers import Number
+
+L2 = ['soccer','8','t']
+S = list(filter(lambda x: isinstance(x,Number),L2))
+print(list(S))
+
+# Question 2
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.arange(-2,2,0.05)
+y1 = np.e**-x
+y2 = x-x**2
+y3 = np.cos(1/x)
+plt.plot(x,y1,'bo',x,y2,'r--',x,y3,'g')
+plt.savefig('piecewise')
+plt.show()
